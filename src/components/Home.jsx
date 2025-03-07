@@ -15,8 +15,8 @@ const Home = () => {
     </div>
     <div className='flex flex-col items-center justify-center gap-5'>
         <button className='bg-white w-full py-3 rounded-2xl font-bold text-lg'>Создать профиль</button>
-        <button className='text-white font-bold text-md mb-6'>Войти с существующим профилем</button>
-        <span className='text-[#999]'>@sovchilarbot_bot</span>
+        <button className='text-white font-bold text-md'>Войти с существующим профилем</button>
+       
     </div>
     </div>
   )
