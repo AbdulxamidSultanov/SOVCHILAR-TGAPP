@@ -3,7 +3,7 @@ import React from 'react'
 const Home = () => {
   return (
     <div className='flex flex-col p-4 bg-black gap-9'>
-    <div className='bg-[#1c1c1d] rounded-2xl  flex flex-col items-center justify-center gap-6 py-20'>
+    <div className='bg-[#1c1c1d] rounded-2xl  flex flex-col items-center justify-center gap-6 py-24'>
         <div className='w-[75px] h-[75px] rounded-[50%] bg-white'>
             <img className='' src="" alt="" />
         </div>
