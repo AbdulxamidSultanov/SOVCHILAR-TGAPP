@@ -63,7 +63,7 @@ const Auth = () => {
             </div>
             <input
               ref={dateInputRef}
-              className=" right-1/2 opacity-0 absolute w-0 h-0 pointer-events-none"
+              className="opacity-0 absolute w-0 h-0 pointer-events-none"
               type="date"
               onChange={handleDateChange}
               aria-label="Выбрать дату рождения"
