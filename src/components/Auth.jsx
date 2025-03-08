@@ -3,7 +3,7 @@ import React from "react";
 const Auth = () => {
   return (
     <form className="componentContainer">
-      <div className="px-4 py-3 flex flex-col justify-between">
+      <div className="px-4 py-3 flex flex-col justify-between h-[80%]">
         <div className="flex flex-col gap-2 mt-6">
           <h1 className="text-white font-bold font-sans text-2xl">
             Создание профиля
@@ -45,7 +45,7 @@ const Auth = () => {
           <div className="flex w-full gap-4">
             <div className="bg-[#666] p-3 flex gap-2 items-center w-[48%] rounded-2xl ">
               <input
-                className="bg-[#666] w-[24px] h-[24px] accent-neutral-50 p-0 m-0"
+                className="bg-[#666] w-[24px] h-[24px] accent-blue-500 p-0 m-0"
                 type="radio"
                 name="male"
                 id="userMale"
@@ -56,7 +56,7 @@ const Auth = () => {
             </div>
             <div className="bg-[#666] p-3 flex justify-start gap-2 w-[48%] rounded-2xl">
               <input
-                className="bg-[#666] w-[24px] h-[24px] accent-neutral-50 p-0 m-0"
+                className="bg-[#666] w-[24px] h-[24px] accent-blue-500 p-0 m-0"
                 type="radio"
                 name="female"
                 id="userFamel"

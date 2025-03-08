@@ -9,8 +9,10 @@
 @utility componentContainer {
   display: flex;
   flex-direction: column;
-  height: 100dvh;
   justify-content: space-between;
+  align-items: center;
+  height: 100dvh;
+  width: 100%;
   background-color: black;
   color: white;
 }
