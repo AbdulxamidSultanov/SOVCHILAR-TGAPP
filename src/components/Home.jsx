@@ -2,7 +2,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className='flex flex-col justify-between h-[100dvh] p-4 bg-black '>
+    <div className='flex flex-col justify-around h-[100dvh] p-4 bg-black '>
     <div className='bg-[#1c1c1d] rounded-2xl  flex flex-col items-center justify-center gap-6 min-h-[70%]'>
         <div className='w-[75px] h-[75px] rounded-[50%] bg-white'>
             <img className='' src="" alt="" />
