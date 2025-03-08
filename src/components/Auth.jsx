@@ -5,7 +5,10 @@ const Auth = () => {
   const [displayDate, setDisplayDate] = useState("Выбрать дату");
 
   const handleContainerClick = () => {
-    dateInputRef.current.showPicker();
+    if (dateInputRef.current) {
+      dateInputRef.current.focus(); 
+      dateInputRef.current.showPicker(); 
+    }
   };
 
   const handleDateChange = (e) => {
