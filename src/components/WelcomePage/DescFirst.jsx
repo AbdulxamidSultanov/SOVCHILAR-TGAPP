@@ -24,7 +24,7 @@ const DescFirst = () => {
         <div className="bg-[#1c1c1c] w-full p-2 flex items-baseline justify-center">
           <Link
             to="/second"
-            className="border w-full p-1 bg-white text-black rounded-lg"
+            className="border w-full p-1 bg-white text-black rounded-lg text-center"
           >
             Продолжить
           </Link>

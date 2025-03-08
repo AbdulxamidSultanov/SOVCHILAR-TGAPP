@@ -21,8 +21,8 @@ const DescSecond = () => {
       </div>
     </div>
     <div className="bg-[#1c1c1c] w-full p-2 flex items-baseline justify-center gap-4">
-    <Link to='/first' className="border w-full p-1 bg-white text-black rounded-lg">{`<`}- </Link >
-    <Link to='/third' className="border w-full p-1 bg-white text-black rounded-lg"> -{`>`}</Link >
+    <Link to='/' className="border w-full p-1 bg-white text-black rounded-lg text-center">{`<`}- </Link >
+    <Link to='/third' className="border w-full p-1 bg-white text-black rounded-lg text-center"> -{`>`}</Link >
 
     </div>
   </div>

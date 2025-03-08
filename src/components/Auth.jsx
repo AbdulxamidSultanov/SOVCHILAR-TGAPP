@@ -40,7 +40,7 @@ const Auth = () => {
           <div className="flex justify-between p-3 bg-[#666] rounded-2xl">
             <h2 className="text-white text-lg">Дата рождения</h2>
             <input
-              className="color-[#3873CC] cursor-pointer"
+              className="text-[#3873CC] cursor-pointer"
               type="date"
               placeholder="Дата рождения"
             />
@@ -63,7 +63,7 @@ const Auth = () => {
                 name="gender"
                 id="userMale"
               />
-              <label for="male" className="text-lg">
+              <label htmlFor="userMale" className="text-lg">
                 Парень
               </label>
             </div>
@@ -74,7 +74,7 @@ const Auth = () => {
                 name="gender"
                 id="userFamel"
               />
-              <label for="male" className="text-lg">
+              <label htmlFor="userFamel" className="text-lg">
                 Девушка
               </label>
             </div>
