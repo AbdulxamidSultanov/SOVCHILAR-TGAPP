@@ -3,7 +3,16 @@ import React from "react";
 const Auth = () => {
   return (
     <form className="componentContainer">
-      <div className="px-4 py-3 flex flex-col justify-between h-[80%]">
+      <div id="steps-bar" className="flex justify-between gap-4 mt-4">
+        <div id="step1" className="min-w-[10vw] h-1 bg-white border"></div>
+        <div id="step2" className="min-w-[10vw] h-1 bg-white border"></div>
+        <div id="step3" className="min-w-[10vw] h-1 bg-white border"></div>
+        <div id="step4" className="min-w-[10vw] h-1 bg-white border"></div>
+      </div>
+      <div
+        id="firs-form"
+        className="px-4 py-3 flex flex-col justify-between h-[80%]"
+      >
         <div className="flex flex-col gap-2 mt-6">
           <h1 className="text-white font-bold font-sans text-2xl">
             Создание профиля
@@ -68,8 +77,11 @@ const Auth = () => {
           </div>
         </div>
       </div>
+
       <div className="p-4 m-0 bg-[#17212B] w-full">
-        <button className="text-black bg-white w-[100%] p-2 rounded-md">Продолжить</button>
+        <button className="text-black bg-white w-[100%] p-2 rounded-md">
+          Продолжить
+        </button>
       </div>
     </form>
   );
