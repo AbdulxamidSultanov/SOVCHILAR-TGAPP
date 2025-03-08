@@ -5,3 +5,13 @@
   max-width: 450px;
   margin: 0 auto;
 }
+
+@utility componentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 10px 12px;
+}
+
