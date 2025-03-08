@@ -2,8 +2,8 @@ import React from "react";
 
 const Auth = () => {
   return (
-    <form className="max-h-[100dvh]">
-      <div className="componentContainer">
+    <form className="componentContainer">
+      <div className="px-4 py-3 flex flex-col justify-between">
         <div className="flex flex-col gap-2 mt-6">
           <h1 className="text-white font-bold font-sans text-2xl">
             Создание профиля
