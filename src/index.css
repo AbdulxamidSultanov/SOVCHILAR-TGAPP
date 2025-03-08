@@ -18,3 +18,11 @@
   color: white;
 }
 
+@utility flexColBet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+* {
+}

@@ -1,6 +1,9 @@
 import React from "react";
 
 const Auth = () => {
+    function handleSubmit(e) {
+        e.preventDefault()
+    }
   return (
     <form className="componentContainer">
       <div id="steps-bar" className="flex justify-between gap-4 mt-4">
@@ -37,14 +40,14 @@ const Auth = () => {
           <div className="flex justify-between p-3 bg-[#666] rounded-2xl">
             <h2 className="text-white text-lg">Дата рождения</h2>
             <input
-              className="color-[#3873CC]"
+              className="color-[#3873CC] cursor-pointer"
               type="date"
               placeholder="Дата рождения"
             />
           </div>
           <div className="flex justify-between p-3 bg-[#666] rounded-2xl">
             <h2 className="text-white text-lg">Ваш город</h2>
-            <select name="city" id="userCity">
+            <select name="city" id="userCity" className="cursor-pointer">
               <option value="Tashkent">Ташкент</option>
             </select>
           </div>
@@ -52,11 +55,12 @@ const Auth = () => {
         <div className="flex flex-col">
           <h2 className="ml-3">Пол</h2>
           <div className="flex w-full gap-4">
+            
             <div className="bg-[#666] p-3 flex gap-2 items-center w-[48%] rounded-2xl ">
               <input
-                className="bg-[#666] w-[24px] h-[24px] accent-blue-500 p-0 m-0"
+                className="bg-[#666] cursor-pointer w-[24px] h-[24px] accent-blue-500 p-0 m-0"
                 type="radio"
-                name="male"
+                name="gender"
                 id="userMale"
               />
               <label for="male" className="text-lg">
@@ -65,9 +69,9 @@ const Auth = () => {
             </div>
             <div className="bg-[#666] p-3 flex justify-start gap-2 w-[48%] rounded-2xl">
               <input
-                className="bg-[#666] w-[24px] h-[24px] accent-blue-500 p-0 m-0"
+                className="bg-[#666] cursor-pointer w-[24px] h-[24px] accent-blue-500 p-0 m-0"
                 type="radio"
-                name="female"
+                name="gender"
                 id="userFamel"
               />
               <label for="male" className="text-lg">
@@ -79,8 +83,8 @@ const Auth = () => {
       </div>
 
       <div className="p-4 m-0 bg-[#17212B] w-full">
-        <button className="text-black bg-white w-[100%] p-2 rounded-md">
-          Продолжить
+        <button onClick={handleSubmit} className="cursor-pointer text-black bg-white w-[100%] p-2 rounded-md">
+          Продолжит
         </button>
       </div>
     </form>

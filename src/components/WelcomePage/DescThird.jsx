@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const DescThird = () => {
   return (
-    <div className="flex flex-col justify-around h-[100dvh] p-4 bg-black ">
-      <div className="bg-[#1c1c1d] rounded-2xl  flex flex-col items-center justify-center gap-6 min-h-[70%]">
+    <div className="flex flex-col justify-around h-[100dvh] p-4 bg-black text-white">
+      <div className="bg-[#1c1c1d] rounded-2xl flex flex-col items-center justify-center gap-6 min-h-[70%]">
         <div className="w-[75px] h-[75px] rounded-[50%] bg-white">
           <img className="" src="" alt="" />
         </div>
@@ -19,7 +19,7 @@ const Home = () => {
       <div className="flex flex-col items-center justify-center gap-5">
         <Link
           to="/form"
-          className="bg-white w-full py-3 rounded-2xl font-bold text-lg text-center"
+          className="bg-white w-full py-3 rounded-2xl font-bold text-lg text-center text-black"
         >
           Создать профиль
         </Link>
@@ -31,4 +31,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default DescThird;
