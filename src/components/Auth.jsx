@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 const Auth = () => {
-    function handleSubmit(e) {
-        e.preventDefault()
-    }
+  const dateInputRef = useRef(null);
+  const [displayDate, setDisplayDate] = useState("Выбрать дату");
+
+  const handleContainerClick = () => {
+    dateInputRef.current.showPicker();
+  };
+
+  const handleDateChange = (e) => {
+    const selectedDate = new Date(e.target.value);
+
+    const day = selectedDate.getDate().toString().padStart(2, "0");
+    const month = (selectedDate.getMonth() + 1).toString().padStart(2, "0");
+    const year = selectedDate.getFullYear();
+
+    setDisplayDate(`${day}.${month}.${year}`);
+  };
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
   return (
     <form className="componentContainer">
       <div id="steps-bar" className="flex justify-between gap-4 mt-4">
@@ -37,13 +53,20 @@ const Auth = () => {
           </span>
         </div>
         <div className="flex flex-col justify-center gap-3">
-          <div className="flex justify-between p-3 bg-[#666] rounded-2xl">
+          <div
+            className="relative flex justify-between p-3 bg-[#666] rounded-2xl items-center cursor-pointer"
+            onClick={handleContainerClick}
+          >
             <h2 className="text-white text-lg">Дата рождения</h2>
+            <div className="text-[#3873CC] bg-white px-3 py-1 rounded">
+              {displayDate}
+            </div>
             <input
-              className="text-[#3873CC] bg-white px-2 rounded-md cursor-pointer"
+              ref={dateInputRef}
+              className="right-0 opacity-0 absolute w-0 h-0 pointer-events-none"
               type="date"
-              defaultValue=""
-              placeholder="Дата рождения"
+              onChange={handleDateChange}
+              aria-label="Выбрать дату рождения"
             />
           </div>
           <div className="flex justify-between p-3 bg-[#666] rounded-2xl">
@@ -56,7 +79,6 @@ const Auth = () => {
         <div className="flex flex-col">
           <h2 className="ml-3">Пол</h2>
           <div className="flex w-full gap-4">
-            
             <div className="bg-[#666] p-3 flex gap-2 items-center w-[48%] rounded-2xl ">
               <input
                 className="bg-[#666] cursor-pointer w-[24px] h-[24px] accent-blue-500 p-0 m-0"
@@ -84,7 +106,10 @@ const Auth = () => {
       </div>
 
       <div className="p-4 m-0 bg-[#17212B] w-full">
-        <button onClick={handleSubmit} className="cursor-pointer text-black bg-white w-[100%] p-2 rounded-md">
+        <button
+          onClick={handleSubmit}
+          className="cursor-pointer text-black bg-white w-[100%] p-2 rounded-md"
+        >
           Продолжит
         </button>
       </div>
