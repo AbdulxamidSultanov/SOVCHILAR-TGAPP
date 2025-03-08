@@ -4,10 +4,10 @@ const Auth = () => {
   return (
     <form className="componentContainer">
       <div id="steps-bar" className="flex justify-between gap-4 mt-4">
-        <div id="step1" className="min-w-[10vw] h-1 bg-white border"></div>
-        <div id="step2" className="min-w-[10vw] h-1 bg-white border"></div>
-        <div id="step3" className="min-w-[10vw] h-1 bg-white border"></div>
-        <div id="step4" className="min-w-[10vw] h-1 bg-white border"></div>
+        <div id="step1" className="min-w-[24vw] h-1 bg-white border"></div>
+        <div id="step2" className="min-w-[24vw] h-1 bg-white border"></div>
+        <div id="step3" className="min-w-[24vw] h-1 bg-white border"></div>
+        <div id="step4" className="min-w-[24vw] h-1 bg-white border"></div>
       </div>
       <div
         id="firs-form"
