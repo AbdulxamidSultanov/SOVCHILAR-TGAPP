@@ -40,8 +40,9 @@ const Auth = () => {
           <div className="flex justify-between p-3 bg-[#666] rounded-2xl">
             <h2 className="text-white text-lg">Дата рождения</h2>
             <input
-              className="text-[#3873CC] cursor-pointer"
+              className="text-[#3873CC] bg-white px-2 rounded-md cursor-pointer"
               type="date"
+              defaultValue=""
               placeholder="Дата рождения"
             />
           </div>
