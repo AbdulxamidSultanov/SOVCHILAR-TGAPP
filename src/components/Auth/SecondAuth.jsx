@@ -1,13 +1,14 @@
 import React, { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
-const Auth = () => {
+const SecondAuth = () => {
   const dateInputRef = useRef(null);
   const [displayDate, setDisplayDate] = useState("Выбрать дату");
 
   const handleContainerClick = () => {
     if (dateInputRef.current) {
-      dateInputRef.current.focus(); 
-      dateInputRef.current.showPicker(); 
+      dateInputRef.current.focus();
+      dateInputRef.current.showPicker();
     }
   };
 
@@ -20,17 +21,9 @@ const Auth = () => {
 
     setDisplayDate(`${day}.${month}.${year}`);
   };
-  function handleSubmit(e) {
-    e.preventDefault();
-  }
+
   return (
-    <form className="componentContainer">
-      <div id="steps-bar" className="flex justify-between gap-4 mt-4">
-        <div id="step1" className="min-w-[24vw] h-1 bg-white border"></div>
-        <div id="step2" className="min-w-[24vw] h-1 bg-white border"></div>
-        <div id="step3" className="min-w-[24vw] h-1 bg-white border"></div>
-        <div id="step4" className="min-w-[24vw] h-1 bg-white border"></div>
-      </div>
+    <>
       <div
         id="firs-form"
         className="px-4 py-3 flex flex-col justify-between h-[80%]"
@@ -108,16 +101,8 @@ const Auth = () => {
         </div>
       </div>
 
-      <div className="p-4 m-0 bg-[#17212B] w-full">
-        <button
-          onClick={handleSubmit}
-          className="cursor-pointer text-black bg-white w-[100%] p-2 rounded-md"
-        >
-          Продолжит
-        </button>
-      </div>
-    </form>
+    </>
   );
 };
 
-export default Auth;
+export default SecondAuth;
