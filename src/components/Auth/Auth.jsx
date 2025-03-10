@@ -2,13 +2,15 @@ import React, { useState } from "react";
 import FirstAuth from "./FirstAuth";
 import SecondAuth from "./SecondAuth";
 import ThirdAuth from "./ThirdAuth";
-import FourthAuth from "./FourthAuth"
+import FourthAuth from "./FourthAuth";
+import { motion } from "framer-motion";
 
 const Auth = () => {
-
-  // *** BUTTON CONFIGS ***
+  const steps = [FirstAuth, SecondAuth, ThirdAuth, FourthAuth];
 
   const [pageCount, setPageCount] = useState(0);
+  const StepComponent = steps[pageCount];
+  // *** BUTTON CONFIGS ***
 
   function handleNextSubmit(e) {
     e.preventDefault();
@@ -27,25 +29,26 @@ const Auth = () => {
   return (
     <form className="componentContainer">
       <div id="steps-bar" className="flex justify-between gap-2 mt-4 w-full">
-        <div
-          id="step1"
-          className={`w-[23dvw] h-1 rounded-md mx-2 bg-blue-800`}
-        ></div>
-        <div
-          id="step2"
-          className={`w-[23dvw] h-1 rounded-md mx-2 ${pageCount > 0 ? `bg-blue-800` : `bg-white`}`}
-        ></div>
-        <div
-          id="step3"
-          className={`w-[23dvw] h-1 rounded-md mx-2 ${pageCount > 1 ? `bg-blue-800` : `bg-white`}`}
-        ></div>
-        <div
-          id="step4"
-          className={`w-[23dvw] h-1 rounded-md mx-2 ${pageCount > 2 ? `bg-blue-800` : `bg-white`}`}
-        ></div>
+        {[...Array(steps.length)].map((_, index) => (
+          <div
+            key={index}
+            className={`w-[23dvw] h-1 rounded-md mx-2 ${
+              index <= pageCount ? "bg-blue-800" : "bg-white"
+            }`}
+          ></div>
+        ))}
       </div>
       <div>
-        {pageCount === 0 ? <FirstAuth /> : pageCount === 1 ? <SecondAuth /> : pageCount === 2 ? <ThirdAuth /> : <FourthAuth />}
+        <motion.div
+          key={pageCount} 
+          initial={{ opacity: 0, y: 50 }} // Начальное состояние (прозрачность 0, смещение вправо)
+          animate={{ opacity: 1, y: 0 }} // Анимация появления
+          exit={{ opacity: 0, y: -50 }} // Анимация ухода (смещение влево)
+          transition={{ duration: 0.3 }} // Время анимации
+          className="w-full"
+        >
+          <StepComponent />
+        </motion.div>
       </div>
       <div className="flex items-center justify-center w-full bg-[#17212B] p-4 gap-4">
         {pageCount < 3 ? (
@@ -57,7 +60,10 @@ const Auth = () => {
             Продолжить
           </button>
         ) : (
-          <button className="cursor-pointer text-black bg-white p-2 rounded-md w-full text-center">
+          <button
+            type="submit"
+            className="cursor-pointer text-black bg-white p-2 rounded-md w-full text-center"
+          >
             Завершить
           </button>
         )}
