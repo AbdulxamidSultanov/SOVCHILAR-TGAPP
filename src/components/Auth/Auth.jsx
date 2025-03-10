@@ -2,15 +2,9 @@ import React, { useState } from "react";
 import FirstAuth from "./FirstAuth";
 import SecondAuth from "./SecondAuth";
 import ThirdAuth from "./ThirdAuth";
-import { button } from "motion/react-client";
+import FourthAuth from "./FourthAuth"
 
 const Auth = () => {
-  const [steps, setStep] = useState({
-    firstPage: false,
-    secondPage: false,
-    thirdPage: false,
-    fourthPage: false,
-  });
 
   // *** BUTTON CONFIGS ***
 
@@ -50,8 +44,9 @@ const Auth = () => {
           className={`w-[23dvw] h-1 rounded-md mx-2 ${pageCount > 2 ? `bg-blue-800` : `bg-white`}`}
         ></div>
       </div>
-      <FirstAuth />
-      {/* <SecondAuth styles={}/> */}
+      <div>
+        {pageCount === 0 ? <FirstAuth /> : pageCount === 1 ? <SecondAuth /> : pageCount === 2 ? <ThirdAuth /> : <FourthAuth />}
+      </div>
       <div className="flex items-center justify-center w-full bg-[#17212B] p-4 gap-4">
         {pageCount < 3 ? (
           <button
